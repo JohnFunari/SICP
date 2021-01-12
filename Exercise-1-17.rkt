@@ -1,0 +1,17 @@
+#lang sicp
+(define (double a)
+  (+ a a))
+(define (halve a)
+  (/ a 2))
+(define (* a b)
+  (if (= b 0)
+      0
+      (cond ((= a 2)
+            (double b))
+            ((= b 2)
+            (double a))
+            ((= a .5)
+             (halve b))
+            ((= b .5)
+             (halve a))
+            (else (+ a (* a (- b 1)))))))
